@@ -9,6 +9,7 @@ credits: https://github.com/kanadeko/cozy-discord | https://github.com/jakeoid/D
     --background-shade-2: #202020;
     --background-shade-3: #171717; 
     --background-shade-4: #202020; 
+    --background-shade-5: #4C4C4C; 
     --foreground-light: #2B8A39; /* chat message */
     --foreground-light-shade-1: #237530;
     --foreground-light-shade-2: #1C6127;
@@ -90,11 +91,19 @@ div.theme-dark.context-menu.item.item-subMenu {
     background-color: var(--foreground-light-shade-2) !important;
 }
 
+.scroller-wrap .scroller::-webkit-scrollbar-track-piece {
+    background-color: var(--background);
+}
+
+.scroller-wrap .scroller::-webkit-scrollbar-thumb, .scroller-wrap .scroller::-webkit-scrollbar-track-piece {
+    background-color: var(--background);
+    background-clip: padding-box;
+    border-radius: 7px;
+}
 
 .theme-dark .chat .title-wrap{
     background-color: rgba(0, 0, 0, 0.5) !important;
 }
-
 
 #friends,
 .friends-table,
@@ -1187,4 +1196,44 @@ div.section.notes {
 
 .theme-dark .message-group .mentioned .message-text {
     background: rgba(113, 113, 113, 0.10);
+}
+
+/* ============================
+	Emoji Picker
+============================ */
+.emoji-picker {
+    background-color:var(--background);
+}
+.bar.search-bar-light {
+    background-color:var(--background);
+}
+
+.search-bar.search-bar-light .search-bar-inner {
+    background-color:var(--background);
+}
+.search-bar.search-bar-light {
+    background-color:var(--background);
+}
+
+.emoji-picker .sticky-header {
+    background-color:var(--background-shade-1);
+}
+.emoji-picker .category {
+    color: var(--foreground-light);
+}
+
+.emoji-picker .scroller .emoji-item.selected {
+    background-color:var(--foreground-light);
+    border-radius: 3px;
+}
+
+.emoji-picker .dimmer.visible {
+    pointer-events: auto;
+    background-color: rgba(18, 18, 18, 0.60);
+}
+
+.diversity-selector .popout {
+    background: var(--background-shade-3);
+    border-radius: 3px;
+    border: 1px solid var(--foreground-light);
 }
